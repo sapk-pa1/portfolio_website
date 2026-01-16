@@ -1,0 +1,94 @@
+/* ========== HERO SECTION ========== */
+.hero {
+  min-height: 90vh;
+  text-align: center;
+  padding: 140px 40px;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(180, 108, 255, 0.15), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(76, 201, 240, 0.15), transparent 40%),
+    linear-gradient(135deg, #02040f, #050b2a);
+  box-shadow: 0 0 100px rgba(120, 80, 255, 0.2);
+}
+
+/* Title */
+.hero h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  letter-spacing: 1px;
+  background: linear-gradient(
+    90deg,
+    var(--neon-pink),
+    var(--neon-purple),
+    var(--neon-blue)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowPulse 3s infinite alternate;
+}
+
+.hero h2 {
+  margin-top: 12px;
+  color: var(--text-muted);
+}
+
+/* Paragraph */
+.hero p {
+  max-width: 700px;
+  margin: 30px auto;
+  color: var(--text-muted);
+  font-size: 18px;
+}
+
+/* CTA */
+.cta-buttons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Headings */
+h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 32px;
+  background: linear-gradient(90deg,
+    var(--neon-purple),
+    var(--neon-blue)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 70px;
+    inset-inline: 0;
+    background: rgba(10, 15, 40, 0.95);
+    flex-direction: column;
+    padding: 24px;
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  section {
+    padding: 40px 28px;
+  }
+
+  .hero {
+    padding: 100px 24px;
+  }
+}
